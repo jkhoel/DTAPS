@@ -1,0 +1,39 @@
+name: Build and Version
+
+on:
+  push:
+    branches:
+      - master
+      - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.x'
+
+    - name: Install GitVersion
+      run: dotnet tool install --global GitVersion.Tool
+
+    - name: Use GitVersion to calculate version
+      run: gitversion /output json /showvariable FullSemVer
+      id: gitversion
+
+    - name: Set up .NET Core
+      run: dotnet build --configuration Release
+
+    - name: Run tests
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Package application
+      run: dotnet publish --configuration Release --output ./artifacts
+
+    - name: Display version
+      run: echo "Version: ${{ steps.gitversion.outputs.FullSemVer }}"

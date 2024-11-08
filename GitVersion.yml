@@ -1,0 +1,8 @@
+mode: ContinuousDeployment
+branches:
+  master:
+    tag: ''
+  development:
+    tag: 'alpha'
+ignore:
+  sha: []
