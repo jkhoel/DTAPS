@@ -33,17 +33,17 @@ jobs:
     #- name: Install GitVersion
     #  run: dotnet tool install --global GitVersion.Tool
 
-    - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@v3.0.0
-      with:
-        versionSpec: '6.x'
+    #- name: Install GitVersion
+    #  uses: gittools/actions/gitversion/setup@v3.0.0
+    #  with:
+    #    versionSpec: '6.x'
 
     #- name: Use GitVersion to calculate version
     #  run: gitversion /output json /showvariable FullSemVer
     #  id: gitversion
 
-    - name: Determine Version
-      uses: gittools/actions/gitversion/execute@v3.0.0
+    #- name: Determine Version
+    #  uses: gittools/actions/gitversion/execute@v3.0.0
       #with:
       #  useConfigFile: true
       #  updateAssemblyInfo: true
@@ -60,7 +60,7 @@ jobs:
     #- name: Display version
     #  run: echo "FullSemVer (env.GitVersion_FullSemVer) : ${{ env.GitVersion_FullSemVer }}"
 
-    - run: |
-          echo "Version : ${{ env.GitVersion_FullSemVer }}"
-      name: Display Version
+    #- run: |
+    #      echo "Version : ${{ env.GitVersion_FullSemVer }}"
+    #  name: Display Version
 

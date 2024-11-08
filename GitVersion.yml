@@ -1,14 +1,21 @@
-# mode: ContinuousDeployment
-# branches:
-#   master:
-#     tag: ''
-#   development:
-#     tag: 'alpha'
-# ignore:
-#   sha: []
 mode: ContinuousDeployment
 branches:
   master:
+    tag: ''
     regex: ^latest$
+  development:
+    tag: 'alpha'
   pull-request:
-    tag: pr
+    tag: 'pr'
+    regex: ^pr/.*$
+ignore:
+  sha: []
+
+
+
+# mode: Mainline
+# branches:
+#   master:
+#     regex: ^latest$
+#   pull-request:
+#     tag: pr
