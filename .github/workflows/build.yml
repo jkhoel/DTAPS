@@ -62,9 +62,11 @@ jobs:
         body: |
           ${{ steps.release_notes.outputs.body }}
         tag_name: ${{ env.GitVersion_FullSemVer }}
-        files: ./*.zip
         token: ${{ secrets.GITHUB_TOKEN }}
         draft: true
+        files: |
+            ./*.zip
+            LICENSE
         
 
     # - name: Generate Release
