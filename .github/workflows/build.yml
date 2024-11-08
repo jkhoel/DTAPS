@@ -65,6 +65,8 @@ jobs:
         # files: ./bin/Release/net5.0/win-x64/publish/*
         files: ./*.zip
         token: ${{ secrets.GITHUB_TOKEN }}
+        draft: true
+        
 
     # - name: Generate Release
     #   uses: "marvinpinto/action-automatic-releases@latest"
