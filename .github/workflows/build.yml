@@ -53,17 +53,18 @@ jobs:
       run: dotnet publish -c Release --self-contained -r win-x64 -p:PublishSingleFile=true
 
     - name: Zip Artifacts
-      run: zip -r ./CAPS-latest.zip /home/runner/work/caps/caps/CAPS/bin/Release/net8.0-windows/win-x64/publish
+      run: zip -r ./CAPS-${{ env.GitVersion_FullSemVer }}.zip /home/runner/work/caps/caps/CAPS/bin/Release/net8.0-windows/win-x64/publish
 
-    # - name: Generate Release Notes
-    #   id: release_notes
-    #   uses: softprops/action-gh-release@v1
-    #   with:
-    #     body: |
-    #       ${{ steps.release_notes.outputs.body }}
-    #     tag_name: ${{ env.GitVersion_FullSemVer }}
-    #     files: ./bin/Release/net5.0/win-x64/publish/*
-    #     token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Generate Release with Notes
+      id: release_notes
+      uses: softprops/action-gh-release@v1
+      with:
+        body: |
+          ${{ steps.release_notes.outputs.body }}
+        tag_name: ${{ env.GitVersion_FullSemVer }}
+        # files: ./bin/Release/net5.0/win-x64/publish/*
+        files: ./*.zip
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Generate Release
     #   uses: "marvinpinto/action-automatic-releases@latest"
