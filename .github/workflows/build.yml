@@ -41,7 +41,6 @@ jobs:
     - name: Determine Version
       uses: gittools/actions/gitversion/execute@v3.0.0
       with:
-      #  useConfigFile: true
         updateAssemblyInfo: true
 
     - name: Build
@@ -53,14 +52,13 @@ jobs:
     - name: Package application
       run: dotnet publish --configuration Release
 
-    - name: Generate Release
-
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        automatic_release_tag: "latest"
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        prerelease: false
-        files: LICENSE.txt, *.exe, *.dll
+    # - name: Generate Release
+    #   uses: "marvinpinto/action-automatic-releases@latest"
+    #   with:
+    #     automatic_release_tag: "latest"
+    #     repo_token: "${{ secrets.GITHUB_TOKEN }}"
+    #     prerelease: false
+    #     files: LICENSE.txt, *.exe, *.dll
       
     - run: |
          echo "Version : ${{ env.GitVersion_FullSemVer }}"
