@@ -6,8 +6,10 @@ name: .NET
 on:
   push:
     branches: [ "main"]
-  pull_request:
-    branches: [ "main", "development" ]
+  #pull_request:
+  #  branches: [ "main", "development" ]
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -41,5 +43,5 @@ jobs:
     - name: Package application
       run: dotnet publish --configuration Release --output ./artifacts
 
-    - name: Display version
-      run: echo "Version: ${{ steps.gitversion.outputs.FullSemVer }}"
+    #- name: Display version
+    #  run: echo "Version: ${{ steps.gitversion.outputs.FullSemVer }}"
