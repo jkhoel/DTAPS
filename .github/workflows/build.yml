@@ -61,6 +61,6 @@ jobs:
     #  run: echo "FullSemVer (env.GitVersion_FullSemVer) : ${{ env.GitVersion_FullSemVer }}"
 
     - run: |
-          echo "FullSemVer (env.GitVersion_FullSemVer) : ${{ env.GitVersion_FullSemVer }}"
-      name: Display GitVersion variables (with prefix)
+          echo "Version : ${{ env.GitVersion_FullSemVer }}"
+      name: Display Version
 
