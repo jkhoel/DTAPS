@@ -41,3 +41,4 @@ E:\Development\CAPS\CAPS\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProvi
 E:\Development\CAPS\CAPS\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 E:\Development\CAPS\CAPS\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 E:\Development\CAPS\CAPS\bin\Debug\net8.0-windows\Serilog.Settings.Configuration.dll
+E:\Development\CAPS\CAPS\obj\Debug\net8.0-windows\CAPS.sourcelink.json

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "CAPS/1.0.0": {
         "dependencies": {
+          "GitVersion.MsBuild": "6.0.4",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.1",
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
@@ -21,6 +22,7 @@
           "CAPS.dll": {}
         }
       },
+      "GitVersion.MsBuild/6.0.4": {},
       "Microsoft.Extensions.Configuration/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
@@ -249,6 +251,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GitVersion.MsBuild/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gf6rFhNQVh7bcmxNFvcbI5MCRPZwdcWcoGDAdXRzrlvsLBdHaVz5KFup4mKXegoiirDCUEbjKyc1wmB2qrnctw==",
+      "path": "gitversion.msbuild/6.0.4",
+      "hashPath": "gitversion.msbuild.6.0.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
       "type": "package",

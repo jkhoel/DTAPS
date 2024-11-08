@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CAPS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4faab8b0fd4dc86a3e2165f2b9c2b6c1440a57bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CAPS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CAPS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

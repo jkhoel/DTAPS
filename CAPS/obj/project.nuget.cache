@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "06c22eQnDxE=",
+  "dgSpecHash": "41oCScB6hVo=",
   "success": true,
   "projectFilePath": "E:\\Development\\CAPS\\CAPS\\CAPS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jens\\.nuget\\packages\\gitversion.msbuild\\6.0.4\\gitversion.msbuild.6.0.4.nupkg.sha512",
     "C:\\Users\\Jens\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Jens\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Jens\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
