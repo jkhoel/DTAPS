@@ -37,9 +37,9 @@ jobs:
 
     - name: Determine Version
       uses: gittools/actions/gitversion/execute@v3.0.0
-      # with:
+      with:
       #  useConfigFile: true
-      #  updateAssemblyInfo: true
+        updateAssemblyInfo: true
 
     - name: Build
       run: dotnet build --no-restore --configuration Release
