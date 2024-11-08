@@ -50,7 +50,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       
     - name: Package application
-      run: dotnet publish -c Release --self-contained -r win-x64 -p:PublishSingleFile=true
+      run: dotnet publish -c Release --self-contained -r win-x64
+      # run: dotnet publish -c Release --self-contained -r win-x64 -p:PublishSingleFile=true
 
     - name: Zip Artifacts
       run: zip -j ./CAPS-${{ env.GitVersion_FullSemVer }}.zip /home/runner/work/caps/caps/CAPS/bin/Release/net8.0-windows/win-x64/publish/*
