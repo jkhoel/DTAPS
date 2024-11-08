@@ -6,7 +6,7 @@
 #     tag: 'alpha'
 # ignore:
 #   sha: []
-mode: Mainline
+mode: ContinuousDeployment
 branches:
   master:
     regex: ^latest$
