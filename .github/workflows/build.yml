@@ -50,7 +50,14 @@ jobs:
     - name: Package application
       run: dotnet publish --configuration Release
 
+    - name: Generate Release
 
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: LICENSE.txt, *.exe, *.dll
+      
     - run: |
          echo "Version : ${{ env.GitVersion_FullSemVer }}"
       name: Display Version
