@@ -57,5 +57,10 @@ jobs:
     - name: Package application
       run: dotnet publish --configuration Release --output ./artifacts
 
-    - name: Display version
-      run: echo "Version: ${{ env.GitVersion_FullSemVer }}"
+    #- name: Display version
+    #  run: echo "FullSemVer (env.GitVersion_FullSemVer) : ${{ env.GitVersion_FullSemVer }}"
+
+    - run: |
+          echo "FullSemVer (env.GitVersion_FullSemVer) : ${{ env.GitVersion_FullSemVer }}"
+      name: Display GitVersion variables (with prefix)
+
