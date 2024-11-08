@@ -1,4 +1,0 @@
-[17:05:35 INF][CAPS.Services.MyService] Work is being done.
-[17:06:10 INF][CAPS.Services.MyService] Work is being done.
-[17:08:43 INF][CAPS.Services.MyService] Work is being done.
-[17:48:02 INF][CAPS.Services.MyService] Work is being done.
