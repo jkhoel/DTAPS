@@ -3,6 +3,7 @@ using CAPS.Services;
 using CAPS.Services.Geo;
 using CAPS.Services.Mission;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -192,4 +193,17 @@ public partial class WaypointListViewModel : ObservableObject
 	}
 
 	#endregion
+
+	[RelayCommand]
+	public void AddWaypoint()
+	{
+		WaypointItems.Add(new("New Waypoint", "N 0 0.0 E 0 0.0", "32U DB 12345 12345", 0, string.Empty));
+	}
+
+	[RelayCommand]
+	public void DeleteWaypoint()
+	{
+		if (WaypointItems.Count > 0)
+			WaypointItems.RemoveAt(WaypointItems.Count - 1);
+	}
 }

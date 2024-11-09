@@ -6,7 +6,7 @@
         xmlns:wplist="clr-namespace:CAPS.Views.WaypointList"
         xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="800" Width="800">
+        Title="{Binding Title}" Height="800" Width="840">
 
     <Grid Background="#FF5A5A5A">
         <Grid.RowDefinitions>
@@ -29,7 +29,7 @@
 
         <!-- TreeView on the left -->
         <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <TreeView ItemsSource="{Binding TreeViewItems}">
+            <TreeView ItemsSource="{Binding TreeViewItems}" Cursor="Hand" >
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Children}">
                         <TextBlock Text="{Binding Header}">

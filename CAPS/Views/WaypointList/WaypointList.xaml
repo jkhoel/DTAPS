@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CAPS.Views.WaypointList" d:DataContext="{d:DesignInstance Type=local:WaypointListViewModel}"
              mc:Ignorable="d">
-    
+
     <UserControl.Resources>
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -17,47 +17,114 @@
         </Style>
     </UserControl.Resources>
 
-    <ListView ItemsSource="{Binding WaypointItems}">
-        <ListView.View>
-            <GridView>
-                <GridViewColumn Header="Name">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="30"/>
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-                <GridViewColumn Header="Coordinates">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="140" />
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-                <GridViewColumn Header="MGRS">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="130" />
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-                <GridViewColumn Header="Elevation">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" />
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-                <GridViewColumn Header="Description">
-                    <GridViewColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding Description, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="200" />
-                        </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                </GridViewColumn>
-            </GridView>
-        </ListView.View>
-    </ListView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0">
+            <ListView ItemsSource="{Binding WaypointItems}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="30"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Coordinates">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="140" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="MGRS">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="130" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Elevation">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Description">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Description, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="200" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="4" HorizontalAlignment="Right">
+            <Button Content="Delete" Command="{Binding DeleteWaypointCommand}" CommandParameter="{Binding}" Padding="4" Margin="2,0,2,0" />
+            <Button Content="Add" Command="{Binding AddWaypointCommand}" CommandParameter="{Binding}" Padding="4" Margin="2,0,2,0" />
+        </StackPanel>
+    </Grid>
+
+    <!--<ScrollViewer>
+        <StackPanel>
+            <ListView ItemsSource="{Binding WaypointItems}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="30"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Coordinates">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="140" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="MGRS">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="130" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Elevation">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Description">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Description, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="200" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <StackPanel Orientation="Horizontal" Margin="0,2,2,0" HorizontalAlignment="Right">
+                <Button Content="Delete" Command="{Binding DeleteWaypointCommand}" CommandParameter="{Binding}" Padding="4" Margin="2,0,2,0" />
+                <Button Content="Add" Command="{Binding AddWaypointCommand}" CommandParameter="{Binding}" Padding="4" Margin="2,0,2,0" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>-->
+
+
 
     <!--<Grid>
         <ListView x:Name="lvTodoItems" Margin="50" SelectionMode="Multiple" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding TodoItems}">
