@@ -1,7 +1,9 @@
-﻿using CAPS.Services;
+﻿using CAPS.Models.Files;
+using CAPS.Services;
 using CAPS.Services.Geo;
 using CAPS.Services.Mission;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -11,7 +13,7 @@ using System.Windows.Controls;
 
 namespace CAPS.Views.WaypointList;
 
-public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, string elevation, string description) : ObservableObject
+public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, double? elevation, string description, double? latitude = 0, double longitude = 0, double northing = 0, double easting = 0) : ObservableObject
 {
 	[ObservableProperty]
 	public string name = name;
@@ -23,22 +25,22 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public string mgrsCoordinates = mgrsCoordinates;
 
 	[ObservableProperty]
-	public string elevation = elevation; // DCS Y
+	public double? elevation = elevation; // DCS Y
 
 	[ObservableProperty]
 	public string description = description;
 
 	[ObservableProperty]
-	public double latitude;
+	public double? latitude = latitude;
 
 	[ObservableProperty]
-	public double longitude;
+	public double? longitude = longitude;
 
 	[ObservableProperty]
-	public double northing; // DCS X
+	public double? northing = northing; // DCS X
 
 	[ObservableProperty]
-	public double easting;  // DCS Z
+	public double? easting = easting;  // DCS Z
 }
 
 public partial class WaypointListViewModel : ObservableObject
@@ -57,48 +59,10 @@ public partial class WaypointListViewModel : ObservableObject
 		_coordinateConverter = coordinateConverter;
 		_missionManager = missionManager;
 
-		_missionManager.ActiveMission.Waypoints.CollectionChanged += OnActiveMissionWaypointsCollectionChanged;
+		// Subscribe to the PropertyChanged event of _missionManager
+		_missionManager.ActiveMissionChanged += OnActiveMissionChanged;
 
 		InitializeWaypoints();
-
-		//WaypointItems = [
-		//	new WaypointListItemViewModel("W1", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W2", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W3", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W4", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W5", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W6", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W7", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W8", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W9", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W10", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W11", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W12", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W13", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W14", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W15", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W16", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W17", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W18", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W19", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W20", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W21", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W22", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W23", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W24", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W25", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W26", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W27", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W28", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W29", "", "", "",  ""),
-		//	new WaypointListItemViewModel("W30", "", "", "",  ""),
-		//	];
-
-		//WaypointItems = [
-		//	new WaypointListItemViewModel("W1", "N 67 16.016 E 014 21.695", "33W VQ 72469 61279", "1000"),
-		//	new WaypointListItemViewModel("W2", "N67:16:9.07 E014:21:54.16", "33W VQ 72621 61528", "200"),
-		//	new WaypointListItemViewModel("W3", "N 38° 53.000' W 77° 00.000'", "18S UJ 22800 30800", "200"),
-		//	];
 	}
 
 	private void InitializeWaypoints()
@@ -113,7 +77,7 @@ public partial class WaypointListViewModel : ObservableObject
 			string coords = _coordinateConverter.DdToDdm(dd.Latitude, dd.Longitude);
 			string mgrs = _coordinateConverter.LatLonToMGRS(coords);
 
-			activeWaypointItems.Add(new(wp.Name, coords, mgrs, wp.YCoord.ToString(), string.Empty));
+			activeWaypointItems.Add(new(wp.Name, coords, mgrs, wp.YCoord, string.Empty, dd.Latitude, dd.Longitude, wp.XCoord, wp.ZCoord));
 		}
 
 		WaypointItems = activeWaypointItems;
@@ -204,13 +168,42 @@ public partial class WaypointListViewModel : ObservableObject
 
 			waypointItem.MgrsCoordinates = _coordinateConverter.LatLonToMGRS(waypointItem.CoordinateString);
 		}
+
+		UpdateActiveMissionWaypoints();
+	}
+
+	// Update the ActiveMission's Waypoints collection based on the WaypointItems collection
+	private void UpdateActiveMissionWaypoints()
+	{
+
+		ObservableCollection<Models.Files.Waypoint> newWaypoints = [];
+
+		foreach (var item in WaypointItems)
+		{
+			newWaypoints.Add(new Models.Files.Waypoint(item.Name, item.Northing ?? 0, item.Elevation ?? 0, item.Easting ?? 0));
+		}
+
+		_missionManager.UpdateActiveMissionWaypoints(newWaypoints);
 	}
 
 	// Handles changes to the ActiveMission's Waypoints collection
-	private void OnActiveMissionWaypointsCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+	private void OnActiveMissionChanged(object? sender, MissionFile newActiveMission)
 	{
 		InitializeWaypoints();
 	}
 
 	#endregion
+
+	[RelayCommand]
+	public void AddWaypoint()
+	{
+		WaypointItems.Add(new("New Waypoint", "N 0 0.0 E 0 0.0", "32U DB 12345 12345", 0, string.Empty));
+	}
+
+	[RelayCommand]
+	public void DeleteWaypoint()
+	{
+		if (WaypointItems.Count > 0)
+			WaypointItems.RemoveAt(WaypointItems.Count - 1);
+	}
 }

@@ -1,4 +1,5 @@
 ﻿using CAPS.Services;
+using CAPS.Services.Mission;
 using CAPS.Views.Components;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -11,12 +12,12 @@ public partial class MainWindowViewModel : ObservableObject
 {
 	public ObservableCollection<TreeViewItemViewModel> TreeViewItems { get; }
 
-	private readonly IMyService _myService;
-
 	[ObservableProperty]
 	private string title = string.Empty;
 
 	private TreeViewItemViewModel selectedItem;
+
+	private readonly IMissionManager _missionManager;
 
 	public TreeViewItemViewModel SelectedItem
 	{
@@ -31,10 +32,9 @@ public partial class MainWindowViewModel : ObservableObject
 	}
 
 
-	public MainWindowViewModel(IMyService myService)
+	public MainWindowViewModel(IMissionManager missionManager)
 	{
-		_myService = myService;
-		_myService.DoWork();
+		_missionManager = missionManager;
 
 		// Retrieve the version information
 		var version = Assembly.GetExecutingAssembly().GetName().Version;
@@ -90,5 +90,17 @@ public partial class MainWindowViewModel : ObservableObject
 	{
 		if (model is TreeViewItemViewModel item)
 			SelectedItem = item;
+	}
+
+	[RelayCommand]
+	public async Task ImportMission()
+	{
+		await _missionManager.LoadMissionFile();
+	}
+
+	[RelayCommand]
+	public async Task ExportMission()
+	{
+		await _missionManager.ExportActiveMission();
 	}
 }

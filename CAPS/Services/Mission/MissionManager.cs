@@ -1,12 +1,10 @@
 ﻿using CAPS.Models.Files;
-using CAPS.Views.WaypointList;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
+using Microsoft.Win32;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Text.Json;
+using System.Windows;
 
 namespace CAPS.Services.Mission;
 
@@ -14,56 +12,68 @@ public interface IMissionManager
 {
 	public List<MissionFile> MissionFiles { get; set; }
 	public MissionFile ActiveMission { get; set; }
+	public event EventHandler<MissionFile>? ActiveMissionChanged;
+	public void UpdateActiveMissionWaypoints(ObservableCollection<Waypoint> waypoints);
+	public Task LoadMissionFile();
+	public Task ExportActiveMission();
 }
 
-public partial class MissionManager: ObservableObject, IMissionManager
+public partial class MissionManager: ObservableObject, IMissionManager, INotifyPropertyChanged
 {
+	#region Properties
+	
 	public List<MissionFile> MissionFiles { get; set; } = [];
 
 	[ObservableProperty]
 	private MissionFile activeMission = new();
+	
+	#endregion
+
+	#region Constructor
 
 	public MissionManager()
     {
 		MissionFiles.Add(ActiveMission);
-
-		ActiveMission.Waypoints =
-		[
-			new("W1", -66957.796875, 20, -348352.28125),
-			new("W2", -64776.8203125, 0, -351449.53125),
-			new("W3", -67193.35774689168, 0, -348526.5665485276),
-			new("W4", 0, 0, 0),
-			new("W5", 0, 0, 0),
-			new("W6", 0, 0, 0),
-			new("W7", 0, 0, 0),
-			new("W8", 0, 0, 0),
-			new("W9", 0, 0, 0),
-			new("W10", 0, 0, 0),
-			new("W11", 0, 0, 0),
-			new("W12", 0, 0, 0),
-			new("W13", 0, 0, 0),
-			new("W14", 0, 0, 0),
-			new("W15", 0, 0, 0),
-			new("W16", 0, 0, 0),
-			new("W17", 0, 0, 0),
-			new("W18", 0, 0, 0),
-			new("W19", 0, 0, 0),
-			new("W20", 0, 0, 0),
-			new("W21", 0, 0, 0),
-			new("W22", 0, 0, 0),
-			new("W23", 0, 0, 0),
-			new("W24", 0, 0, 0),
-			new("W25", 0, 0, 0),
-			new("W26", 0, 0, 0),
-			new("W27", 0, 0, 0),
-			new("W28", 0, 0, 0),
-			new("W29", 0, 0, 0),
-			new("W30", 0, 0, 0),
-		];
 	}
+
+	#endregion
+
+	#region Events and Handlers
+
+	public event EventHandler<MissionFile>? ActiveMissionChanged;
+
+	partial void OnActiveMissionChanged(MissionFile value) => ActiveMissionChanged?.Invoke(this, value);
+
+	#endregion
+
+	#region Methods
 
 	public void UpdateActiveMissionWaypoints(ObservableCollection<Waypoint> waypoints)
 	{
 		ActiveMission.Waypoints = waypoints;
 	}
+
+	public async Task LoadMissionFile()
+	{
+		var cancellationTokenSource = new CancellationTokenSource();
+		var missionFile = await MissionFileImporter.ImportMissionFileAsync(cancellationTokenSource.Token);
+
+		if (missionFile != null)
+		{
+			ActiveMission = missionFile;
+			// Add the loaded mission file to the list if needed
+			MissionFiles.Add(missionFile);
+		}
+	}
+
+	public async Task ExportActiveMission()
+	{
+
+		var cancellationTokenSource = new CancellationTokenSource();
+
+		await MissionFileExporter.ExportMissionFileAsync(ActiveMission, cancellationTokenSource.Token);
+	}
+
+	#endregion
+
 }
