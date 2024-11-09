@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 namespace CAPS.Views.WaypointList;
 
-public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, string elevation) : ObservableObject
+public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, string elevation, string description) : ObservableObject
 {
 	[ObservableProperty]
 	public string name = name;
@@ -23,6 +23,9 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 
 	[ObservableProperty]
 	public string elevation = elevation;
+
+	[ObservableProperty]
+	public string description = description;
 
 	[ObservableProperty]
 	public double latitude;
@@ -54,10 +57,43 @@ public partial class WaypointListViewModel : ObservableObject
 
 
 		WaypointItems = [
-			new WaypointListItemViewModel("W1", "N 67 16.016 E 014 21.695", "33W VQ 72469 61279", "1000"),
-			new WaypointListItemViewModel("W2", "N67:16:9.07 E014:21:54.16", "33W VQ 72621 61528", "200"),
-			//new WaypointListItemViewModel("W3", "N 38° 53.000' W 77° 00.000'", "18S UJ 22800 30800", "200"), // Format not supported yet
+			new WaypointListItemViewModel("W1", "", "", "",  ""),
+			new WaypointListItemViewModel("W2", "", "", "",  ""),
+			new WaypointListItemViewModel("W3", "", "", "",  ""),
+			new WaypointListItemViewModel("W4", "", "", "",  ""),
+			new WaypointListItemViewModel("W5", "", "", "",  ""),
+			new WaypointListItemViewModel("W6", "", "", "",  ""),
+			new WaypointListItemViewModel("W7", "", "", "",  ""),
+			new WaypointListItemViewModel("W8", "", "", "",  ""),
+			new WaypointListItemViewModel("W9", "", "", "",  ""),
+			new WaypointListItemViewModel("W10", "", "", "",  ""),
+			new WaypointListItemViewModel("W11", "", "", "",  ""),
+			new WaypointListItemViewModel("W12", "", "", "",  ""),
+			new WaypointListItemViewModel("W13", "", "", "",  ""),
+			new WaypointListItemViewModel("W14", "", "", "",  ""),
+			new WaypointListItemViewModel("W15", "", "", "",  ""),
+			new WaypointListItemViewModel("W16", "", "", "",  ""),
+			new WaypointListItemViewModel("W17", "", "", "",  ""),
+			new WaypointListItemViewModel("W18", "", "", "",  ""),
+			new WaypointListItemViewModel("W19", "", "", "",  ""),
+			new WaypointListItemViewModel("W20", "", "", "",  ""),
+			new WaypointListItemViewModel("W21", "", "", "",  ""),
+			new WaypointListItemViewModel("W22", "", "", "",  ""),
+			new WaypointListItemViewModel("W23", "", "", "",  ""),
+			new WaypointListItemViewModel("W24", "", "", "",  ""),
+			new WaypointListItemViewModel("W25", "", "", "",  ""),
+			new WaypointListItemViewModel("W26", "", "", "",  ""),
+			new WaypointListItemViewModel("W27", "", "", "",  ""),
+			new WaypointListItemViewModel("W28", "", "", "",  ""),
+			new WaypointListItemViewModel("W29", "", "", "",  ""),
+			new WaypointListItemViewModel("W30", "", "", "",  ""),
 			];
+
+		//WaypointItems = [
+		//	new WaypointListItemViewModel("W1", "N 67 16.016 E 014 21.695", "33W VQ 72469 61279", "1000"),
+		//	new WaypointListItemViewModel("W2", "N67:16:9.07 E014:21:54.16", "33W VQ 72621 61528", "200"),
+		//	new WaypointListItemViewModel("W3", "N 38° 53.000' W 77° 00.000'", "18S UJ 22800 30800", "200"),
+		//	];
 	}
 
 	#endregion

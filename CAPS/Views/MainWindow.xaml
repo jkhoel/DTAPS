@@ -6,15 +6,15 @@
         xmlns:wplist="clr-namespace:CAPS.Views.WaypointList"
         xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="450" Width="800">
-    
+        Title="{Binding Title}" Height="800" Width="800">
+
     <Grid Background="#FF5A5A5A">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="100"/>
+            <ColumnDefinition Width="Auto" MinWidth="120"/>
             <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>

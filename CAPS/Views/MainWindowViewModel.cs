@@ -45,37 +45,42 @@ public partial class MainWindowViewModel : ObservableObject
 		[
 			new("Mission 1",
 			[
-				new TreeViewItemViewModel("Options", null, OnMissionSelected),
+				new TreeViewItemViewModel("Settings", null, OnMissionSelected),
+				new TreeViewItemViewModel("Laser Codes", null, OnMissionSelected),
+				new TreeViewItemViewModel("Notebook", null, OnMissionSelected),
+				new TreeViewItemViewModel("Prepoints", null, OnMissionSelected),
+				new TreeViewItemViewModel("Radios", null, OnMissionSelected),
+				new TreeViewItemViewModel("Routes", null, OnMissionSelected),
+				new TreeViewItemViewModel("TargetPoints", null, OnMissionSelected),
 				new TreeViewItemViewModel("Waypoints", null, OnMissionSelected),
-				new TreeViewItemViewModel("Other", null, OnMissionSelected)
 			], OnMissionSelected),
-			new("Mission 2",
-			[
-				new TreeViewItemViewModel("Options", null, OnMissionSelected),
-				new TreeViewItemViewModel("Waypoints", null, OnMissionSelected),
-				new TreeViewItemViewModel("Other", null, OnMissionSelected)
-			], OnMissionSelected),
-			new("Mission 3",
-			[
-				new TreeViewItemViewModel("Options", null, OnMissionSelected),
-				new TreeViewItemViewModel("Waypoints", null, OnMissionSelected),
-				new TreeViewItemViewModel("Other", null, OnMissionSelected)
-			], OnMissionSelected),
-			new("Maps",
-			[
-				new TreeViewItemViewModel("Map 1",
-				[
-					new TreeViewItemViewModel("Layer 2", null, OnMissionSelected),
-					new TreeViewItemViewModel("Layer 1", null, OnMissionSelected),
-					new TreeViewItemViewModel("Base Layer", null, OnMissionSelected)
-				]),
-				new TreeViewItemViewModel("Map 2",
-				[
-					new TreeViewItemViewModel("Layer 2", null, OnMissionSelected),
-					new TreeViewItemViewModel("Layer 1", null, OnMissionSelected),
-					new TreeViewItemViewModel("Base Layer", null, OnMissionSelected)
-				])
-			],OnMissionSelected)
+			//new("Mission 2",
+			//[
+			//	new TreeViewItemViewModel("Options", null, OnMissionSelected),
+			//	new TreeViewItemViewModel("Waypoints", null, OnMissionSelected),
+			//	new TreeViewItemViewModel("Other", null, OnMissionSelected)
+			//], OnMissionSelected),
+			//new("Mission 3",
+			//[
+			//	new TreeViewItemViewModel("Options", null, OnMissionSelected),
+			//	new TreeViewItemViewModel("Waypoints", null, OnMissionSelected),
+			//	new TreeViewItemViewModel("Other", null, OnMissionSelected)
+			//], OnMissionSelected),
+			//new("Maps",
+			//[
+			//	new TreeViewItemViewModel("Map 1",
+			//	[
+			//		new TreeViewItemViewModel("Layer 2", null, OnMissionSelected),
+			//		new TreeViewItemViewModel("Layer 1", null, OnMissionSelected),
+			//		new TreeViewItemViewModel("Base Layer", null, OnMissionSelected)
+			//	]),
+			//	new TreeViewItemViewModel("Map 2",
+			//	[
+			//		new TreeViewItemViewModel("Layer 2", null, OnMissionSelected),
+			//		new TreeViewItemViewModel("Layer 1", null, OnMissionSelected),
+			//		new TreeViewItemViewModel("Base Layer", null, OnMissionSelected)
+			//	])
+			//],OnMissionSelected)
 		];
 	}
 

@@ -10,6 +10,11 @@
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
     </UserControl.Resources>
 
     <ListView ItemsSource="{Binding WaypointItems}">
@@ -18,28 +23,35 @@
                 <GridViewColumn Header="Name">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" />
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="30"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
                 <GridViewColumn Header="Coordinates">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" />
+                            <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="140" />
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
                 <GridViewColumn Header="MGRS">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" />
+                            <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="130" />
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
                 <GridViewColumn Header="Elevation">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" />
+                            <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="Description">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Description, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="200" />
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
