@@ -1,5 +1,6 @@
 ﻿using CAPS.Services;
 using CAPS.Services.Geo;
+using CAPS.Services.Mission;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
@@ -22,7 +23,7 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public string mgrsCoordinates = mgrsCoordinates;
 
 	[ObservableProperty]
-	public string elevation = elevation;
+	public string elevation = elevation; // DCS Y
 
 	[ObservableProperty]
 	public string description = description;
@@ -37,57 +38,61 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public double northing; // DCS X
 
 	[ObservableProperty]
-	public double easting;	// DCS Z
+	public double easting;  // DCS Z
 }
 
 public partial class WaypointListViewModel : ObservableObject
 {
 	#region Fields and Ctor
 
+	private readonly IMissionManager _missionManager;
 	private readonly ILogger<WaypointListViewModel> _logger;
-
 	private readonly ICoordinateConverterService _coordinateConverter;
 
 	private ObservableCollection<WaypointListItemViewModel> waypointItems = [];
 
-	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateConverterService coordinateConverter)
+	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateConverterService coordinateConverter, IMissionManager missionManager)
 	{
 		_logger = logger;
 		_coordinateConverter = coordinateConverter;
+		_missionManager = missionManager;
 
+		_missionManager.ActiveMission.Waypoints.CollectionChanged += OnActiveMissionWaypointsCollectionChanged;
 
-		WaypointItems = [
-			new WaypointListItemViewModel("W1", "", "", "",  ""),
-			new WaypointListItemViewModel("W2", "", "", "",  ""),
-			new WaypointListItemViewModel("W3", "", "", "",  ""),
-			new WaypointListItemViewModel("W4", "", "", "",  ""),
-			new WaypointListItemViewModel("W5", "", "", "",  ""),
-			new WaypointListItemViewModel("W6", "", "", "",  ""),
-			new WaypointListItemViewModel("W7", "", "", "",  ""),
-			new WaypointListItemViewModel("W8", "", "", "",  ""),
-			new WaypointListItemViewModel("W9", "", "", "",  ""),
-			new WaypointListItemViewModel("W10", "", "", "",  ""),
-			new WaypointListItemViewModel("W11", "", "", "",  ""),
-			new WaypointListItemViewModel("W12", "", "", "",  ""),
-			new WaypointListItemViewModel("W13", "", "", "",  ""),
-			new WaypointListItemViewModel("W14", "", "", "",  ""),
-			new WaypointListItemViewModel("W15", "", "", "",  ""),
-			new WaypointListItemViewModel("W16", "", "", "",  ""),
-			new WaypointListItemViewModel("W17", "", "", "",  ""),
-			new WaypointListItemViewModel("W18", "", "", "",  ""),
-			new WaypointListItemViewModel("W19", "", "", "",  ""),
-			new WaypointListItemViewModel("W20", "", "", "",  ""),
-			new WaypointListItemViewModel("W21", "", "", "",  ""),
-			new WaypointListItemViewModel("W22", "", "", "",  ""),
-			new WaypointListItemViewModel("W23", "", "", "",  ""),
-			new WaypointListItemViewModel("W24", "", "", "",  ""),
-			new WaypointListItemViewModel("W25", "", "", "",  ""),
-			new WaypointListItemViewModel("W26", "", "", "",  ""),
-			new WaypointListItemViewModel("W27", "", "", "",  ""),
-			new WaypointListItemViewModel("W28", "", "", "",  ""),
-			new WaypointListItemViewModel("W29", "", "", "",  ""),
-			new WaypointListItemViewModel("W30", "", "", "",  ""),
-			];
+		InitializeWaypoints();
+
+		//WaypointItems = [
+		//	new WaypointListItemViewModel("W1", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W2", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W3", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W4", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W5", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W6", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W7", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W8", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W9", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W10", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W11", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W12", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W13", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W14", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W15", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W16", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W17", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W18", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W19", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W20", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W21", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W22", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W23", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W24", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W25", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W26", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W27", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W28", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W29", "", "", "",  ""),
+		//	new WaypointListItemViewModel("W30", "", "", "",  ""),
+		//	];
 
 		//WaypointItems = [
 		//	new WaypointListItemViewModel("W1", "N 67 16.016 E 014 21.695", "33W VQ 72469 61279", "1000"),
@@ -95,6 +100,25 @@ public partial class WaypointListViewModel : ObservableObject
 		//	new WaypointListItemViewModel("W3", "N 38° 53.000' W 77° 00.000'", "18S UJ 22800 30800", "200"),
 		//	];
 	}
+
+	private void InitializeWaypoints()
+	{
+		// Initialize WaypointItems
+		ObservableCollection<WaypointListItemViewModel> activeWaypointItems = [];
+
+		foreach (var wp in _missionManager.ActiveMission.Waypoints)
+		{
+			var dd = _coordinateConverter.FromDcsCoordinates(wp.XCoord, wp.ZCoord);
+
+			string coords = _coordinateConverter.DdToDdm(dd.Latitude, dd.Longitude);
+			string mgrs = _coordinateConverter.LatLonToMGRS(coords);
+
+			activeWaypointItems.Add(new(wp.Name, coords, mgrs, wp.YCoord.ToString(), string.Empty));
+		}
+
+		WaypointItems = activeWaypointItems;
+	}
+
 
 	#endregion
 
@@ -175,11 +199,17 @@ public partial class WaypointListViewModel : ObservableObject
 			waypointItem.Longitude = longitude;
 
 			(double northing, double easting, int _) = _coordinateConverter.ToDcsCoordiantes(waypointItem.CoordinateString);
-			waypointItem.Northing = northing;
 			waypointItem.Easting = easting;
+			waypointItem.Northing = northing;
 
 			waypointItem.MgrsCoordinates = _coordinateConverter.LatLonToMGRS(waypointItem.CoordinateString);
 		}
+	}
+
+	// Handles changes to the ActiveMission's Waypoints collection
+	private void OnActiveMissionWaypointsCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+	{
+		InitializeWaypoints();
 	}
 
 	#endregion

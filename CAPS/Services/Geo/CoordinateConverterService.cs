@@ -1,6 +1,7 @@
 ﻿using CAPS.Models.Geo;
 using CAPS.Services.Mission;
 using CoordinateSharp;
+using System.Net;
 using System.Text.RegularExpressions;
 
 namespace CAPS.Services.Geo;
@@ -8,9 +9,20 @@ namespace CAPS.Services.Geo;
 public interface ICoordinateConverterService
 {
 	public string LatLonToMGRS(string coordinate);
-	public (double Northing, double Easting, int Zone) ToDcsCoordiantes(string coordinate);
-	public (double latitude, double longitude) ParseCoordinate(string coordinate);
+	public (double Northing, double Easting, int Zone) ToDcsCoordiantes(string coordinate);     // NOTE! NORTHING AND EASTING IS POSSIBLY SWAPPED!
+	public (double Latitude, double Longitude) ParseCoordinate(string coordinate);
+	public (double Latitude, double Longitude) FromDcsCoordinates(double easting, double northing);
+	public string DdToDdm(double latitude, double longitude);
 }
+
+
+// DCS world has 3-dimensional coordinate system.DCS ground is an infinite plain.
+
+// Main axes:
+
+// X is directed to the north
+// Z is directed to the east
+// Y is directed up
 
 public partial class CoordinateConverterService : ICoordinateConverterService
 {
@@ -70,6 +82,32 @@ public partial class CoordinateConverterService : ICoordinateConverterService
 	#region Implementation
 
 	/// <summary>
+	/// Converts Decimal Degrees (DD) to Decimal Degrees Minutes (DDM) format.
+	/// </summary>
+	/// <param name="latitude">Latitude in Decimal Degrees</param>
+	/// <param name="longitude">Longitude in Decimal Degrees</param>
+	/// <returns>A string representing the coordinates in DDM formated (N67 15.100 E014 55.550)</returns>
+	public string DdToDdm(double latitude, double longitude)
+	{
+		string latitudeDirection = latitude >= 0 ? "N" : "S";
+		string longitudeDirection = longitude >= 0 ? "E" : "W";
+
+		latitude = Math.Abs(latitude);
+		longitude = Math.Abs(longitude);
+
+		int latDegrees = (int)latitude;
+		double latDecimalMinutes = (latitude - latDegrees) * 60;
+
+		int lonDegrees = (int)longitude;
+		double lonDecimalMinutes = (longitude - lonDegrees) * 60;
+
+		return string.Format(System.Globalization.CultureInfo.InvariantCulture,
+							 "{0}{1} {2:F3} {3}{4} {5:F3}",
+							 latitudeDirection, latDegrees, latDecimalMinutes,
+							 longitudeDirection, lonDegrees, lonDecimalMinutes);
+	}
+
+	/// <summary>
 	/// Converts a coordinate string formatted as "N67:15:10 E014:55:55" to MGRS
 	/// </summary>
 	/// <param name="coordinate"></param>
@@ -97,12 +135,24 @@ public partial class CoordinateConverterService : ICoordinateConverterService
 	}
 
 	/// <summary>
+	/// Converts DCS coordinates to DD coordinates
+	/// </summary>
+	/// <param name="northing">DCS X coordinate</param>
+	/// <param name="easting">DCX Z coordinate</param>
+	/// <returns></returns>
+	public (double Latitude, double Longitude) FromDcsCoordinates(double northing, double easting)
+	{
+		var activeTheater = _theaterService.ActiveTheater;
+		return UtmConverter.ToLatLon(easting, northing, activeTheater.UTM_zone, activeTheater.IsSouthernHemisphere, activeTheater.false_easting, activeTheater.false_northing);
+	}
+
+	/// <summary>
 	/// Parses a coordinate string formatted as "N67:15:10 E014:55:55"
 	/// </summary>
 	/// <param name="coordinate"></param>
 	/// <returns>A tuple of latitude and logitude as doubles</returns>
 	/// <exception cref="ArgumentException"></exception>
-	public (double latitude, double longitude) ParseCoordinate(string coordinate)
+	public (double Latitude, double Longitude) ParseCoordinate(string coordinate)
 	{
 		Match match;
 		if ((match = DmsRegex().Match(coordinate)).Success)

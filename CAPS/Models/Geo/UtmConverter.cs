@@ -149,7 +149,7 @@ public class UtmConverter
 	/// <param name="latitude"></param>
 	/// <param name="longitude"></param>
 	/// <returns></returns>
-	public static (double Easting, double Northing, int Zone) FromLatLon(
+	public static (double Northing, double Easting, int Zone) FromLatLon(
 		double latitude,
 		double longitude,
 		int? zone = null,
@@ -184,7 +184,7 @@ public class UtmConverter
 			utmNorthing += 10000000.0; // Offset for southern hemisphere
 		}
 
-		return (utmEasting, utmNorthing, zoneNumber);
+		return (utmNorthing, utmEasting, zoneNumber);
 	}
 
 	private static int CalculateZoneNumber(double latitude, double longitude)

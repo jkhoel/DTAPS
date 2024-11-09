@@ -66,6 +66,7 @@ public partial class App : Application
 	private void InitializeServices(IServiceCollection services)
 	{
 		services.AddSingleton<IMyService, MyService>();
+		services.AddSingleton<IMissionManager, MissionManager>();
 		services.AddSingleton<ITheaterService, TheaterService>();
 		services.AddSingleton<ICoordinateConverterService, CoordinateConverterService>();
 

@@ -9,4 +9,6 @@ public class Theater
 	public string? Hemisphere { get; set; }
 	public int WinterTimeDelta { get; set; }
 	public int SummerTimeDelta { get; set; }
+
+	public bool IsSouthernHemisphere => Hemisphere != "N";
 }
