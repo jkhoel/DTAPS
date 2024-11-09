@@ -7,7 +7,7 @@ public interface IMyService
 	void DoWork();
 }
 
-public class MyService : IMyService
+public partial class MyService : IMyService
 {
 	private readonly ILogger<MyService> _logger;
 

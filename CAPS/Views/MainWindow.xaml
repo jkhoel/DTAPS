@@ -3,10 +3,48 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CAPS"
+        xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="{Binding Title}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="100"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Toolbar -->
+        <ToolBar Grid.Row="0" Grid.ColumnSpan="3">
+            <Button Content="Button 1"/>
+            <Button Content="Button 2"/>
+            <Button Content="Button 3"/>
+        </ToolBar>
+
+        <!-- TreeView on the left -->
+        <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <TreeView ItemsSource="{Binding TreeViewItems}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <TextBlock Text="{Binding Header}">
+                            <TextBlock.InputBindings>
+                                <MouseBinding Command="{Binding OnSelectCommand}" MouseAction="LeftClick" />
+                            </TextBlock.InputBindings>
+                        </TextBlock>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </ScrollViewer>
+
+        <!-- GridSplitter -->
+        <GridSplitter Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+
+        <!-- Dynamic content area on the right -->
+        <ContentControl Grid.Row="1" Grid.Column="2">
+            <Label x:Name="label" Content="{Binding SelectedItem.Header}" HorizontalAlignment="Left" Margin="205,157,0,0" VerticalAlignment="Top"/>
+        </ContentControl>
     </Grid>
 </Window>
