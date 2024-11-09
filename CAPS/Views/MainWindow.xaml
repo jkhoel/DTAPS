@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
+    
     <Grid Background="#FF5A5A5A">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

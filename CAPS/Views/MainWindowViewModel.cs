@@ -4,11 +4,10 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Reflection;
-using System.Windows.Input;
 
 namespace CAPS.Views;
 
-internal partial class MainWindowViewModel : ObservableObject
+public partial class MainWindowViewModel : ObservableObject
 {
 	public ObservableCollection<TreeViewItemViewModel> TreeViewItems { get; }
 
