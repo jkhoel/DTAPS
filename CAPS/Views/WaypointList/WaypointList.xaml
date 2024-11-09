@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="CAPS.Views.WaypointList.WaypointList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CAPS.Views.WaypointList"
+             mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <local:WaypointListViewModel/>
+    </UserControl.DataContext>
+
+        <ListView x:Name="lvTodoItems" SelectionMode="Multiple" ItemsSource="{Binding WaypointItems}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                <GridViewColumn Header="Coordinates">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="MGRS" DisplayMemberBinding="{Binding MgrsCoordinates}"/>
+                    <GridViewColumn Header="Elevation" DisplayMemberBinding="{Binding Elevation}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    <!--<Grid>
+        <ListView x:Name="lvTodoItems" Margin="50" SelectionMode="Multiple" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding TodoItems}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Coordinates" DisplayMemberBinding="{Binding Coordinates}"/>
+                    <GridViewColumn Header="MGRS" DisplayMemberBinding="{Binding MGRSCoordianates}"/>
+                    <GridViewColumn Header="Elevation" DisplayMemberBinding="{Binding Elevation}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>-->
+</UserControl>

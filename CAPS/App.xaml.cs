@@ -3,9 +3,10 @@ using System.Windows;
 using CAPS.Services;
 using CAPS.Views;
 using Serilog;
-using Serilog.Sinks.SystemConsole.Themes;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using CAPS.Views.Components;
+using CAPS.Views.WaypointList;
 
 namespace CAPS
 {
@@ -63,6 +64,11 @@ namespace CAPS
 		{
 			// Register your view models here
 			services.AddTransient<MainWindowViewModel>();
+			services.AddTransient<TreeViewItemViewModel>();
+			services.AddTransient<WaypointListViewModel>();
+
+			// Register the views
+			services.AddTransient<WaypointList>();
 
 			// Register the main window
 			services.AddSingleton<MainWindow>();

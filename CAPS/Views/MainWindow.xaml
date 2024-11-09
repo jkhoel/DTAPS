@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wplist="clr-namespace:CAPS.Views.WaypointList"
         xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF5A5A5A">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -18,11 +19,13 @@
         </Grid.ColumnDefinitions>
 
         <!-- Toolbar -->
-        <ToolBar Grid.Row="0" Grid.ColumnSpan="3">
-            <Button Content="Button 1"/>
-            <Button Content="Button 2"/>
-            <Button Content="Button 3"/>
-        </ToolBar>
+        <Grid Background="#FFB5B5B5" Grid.Row="0" Grid.ColumnSpan="3" >
+            <StackPanel Orientation="Horizontal">
+            <Button Content="Button 1" Margin="2"/>
+            <Button Content="Button 2" Margin="2"/>
+            <Button Content="Button 3" Margin="2"/>
+        </StackPanel>
+        </Grid>
 
         <!-- TreeView on the left -->
         <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
@@ -43,8 +46,6 @@
         <GridSplitter Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
 
         <!-- Dynamic content area on the right -->
-        <ContentControl Grid.Row="1" Grid.Column="2">
-            <Label x:Name="label" Content="{Binding SelectedItem.Header}" HorizontalAlignment="Left" Margin="205,157,0,0" VerticalAlignment="Top"/>
-        </ContentControl>
+        <wplist:WaypointList Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>
