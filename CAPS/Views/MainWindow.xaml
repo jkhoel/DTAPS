@@ -3,10 +3,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CAPS"
+        xmlns:wplist="clr-namespace:CAPS.Views.WaypointList"
+        xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="450" Width="800">
-    <Grid>
-        <TextBlock Text="{Binding Title}" />
+        Title="{Binding Title}" Height="800" Width="800">
+
+    <Grid Background="#FF5A5A5A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="120"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Toolbar -->
+        <Grid Background="#FFB5B5B5" Grid.Row="0" Grid.ColumnSpan="3" >
+            <StackPanel Orientation="Horizontal">
+            <Button Content="Button 1" Margin="2"/>
+            <Button Content="Button 2" Margin="2"/>
+            <Button Content="Button 3" Margin="2"/>
+        </StackPanel>
+        </Grid>
+
+        <!-- TreeView on the left -->
+        <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <TreeView ItemsSource="{Binding TreeViewItems}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <TextBlock Text="{Binding Header}">
+                            <TextBlock.InputBindings>
+                                <MouseBinding Command="{Binding OnSelectCommand}" MouseAction="LeftClick" />
+                            </TextBlock.InputBindings>
+                        </TextBlock>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </ScrollViewer>
+
+        <!-- GridSplitter -->
+        <GridSplitter Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+
+        <!-- Dynamic content area on the right -->
+        <wplist:WaypointList Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>

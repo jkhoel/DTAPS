@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="CAPS.Views.WaypointList.WaypointList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CAPS.Views.WaypointList" d:DataContext="{d:DesignInstance Type=local:WaypointListViewModel}"
+             mc:Ignorable="d">
+    
+    <UserControl.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+    </UserControl.Resources>
+
+    <ListView ItemsSource="{Binding WaypointItems}">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="Name">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="30"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="Coordinates">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding CoordinateString, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="140" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="MGRS">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding MgrsCoordinates, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="130" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="Elevation">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Elevation, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="Description">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Description, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="200" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+    </ListView>
+
+    <!--<Grid>
+        <ListView x:Name="lvTodoItems" Margin="50" SelectionMode="Multiple" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding TodoItems}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Coordinates" DisplayMemberBinding="{Binding Coordinates}"/>
+                    <GridViewColumn Header="MGRS" DisplayMemberBinding="{Binding MGRSCoordianates}"/>
+                    <GridViewColumn Header="Elevation" DisplayMemberBinding="{Binding Elevation}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>-->
+</UserControl>
