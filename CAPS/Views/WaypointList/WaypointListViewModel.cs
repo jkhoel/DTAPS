@@ -1,4 +1,5 @@
-﻿using CAPS.Models.Files;
+﻿using CAPS.Core;
+using CAPS.Models.Files;
 using CAPS.Services;
 using CAPS.Services.Geo;
 using CAPS.Services.Mission;
@@ -8,7 +9,6 @@ using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Windows.Controls;
 
 
 namespace CAPS.Views.WaypointList;
@@ -43,17 +43,17 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public double? easting = easting;  // DCS Z
 }
 
-public partial class WaypointListViewModel : ObservableObject
+public partial class WaypointListViewModel : ViewModel
 {
 	#region Fields and Ctor
 
 	private readonly IMissionManager _missionManager;
 	private readonly ILogger<WaypointListViewModel> _logger;
-	private readonly ICoordinateConverterService _coordinateConverter;
+	private readonly ICoordinateConverter _coordinateConverter;
 
 	private ObservableCollection<WaypointListItemViewModel> waypointItems = [];
 
-	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateConverterService coordinateConverter, IMissionManager missionManager)
+	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateConverter coordinateConverter, IMissionManager missionManager)
 	{
 		_logger = logger;
 		_coordinateConverter = coordinateConverter;

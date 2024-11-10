@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace CAPS.Services.Geo;
 
-public interface ICoordinateConverterService
+public interface ICoordinateConverter
 {
 	public string LatLonToMGRS(string coordinate);
 	public (double Northing, double Easting, int Zone) ToDcsCoordiantes(string coordinate);     // NOTE! NORTHING AND EASTING IS POSSIBLY SWAPPED!
@@ -24,13 +24,13 @@ public interface ICoordinateConverterService
 // Z is directed to the east
 // Y is directed up
 
-public partial class CoordinateConverterService : ICoordinateConverterService
+public partial class CoordinateConverter : ICoordinateConverter
 {
 	#region Constructor and Fields
 
-	private ITheaterService _theaterService;
+	private ITheaterManager _theaterService;
 
-	public CoordinateConverterService(ITheaterService theaterService)
+	public CoordinateConverter(ITheaterManager theaterService)
 	{
 		_theaterService = theaterService;
 	}

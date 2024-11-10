@@ -1,10 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CAPS.Core;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
 namespace CAPS.Views.Components;
 
-public class TreeViewItemViewModel : ObservableObject
+public class TreeViewItemViewModel : ViewModel	
 {
 	public string Header { get; set; } = string.Empty;
 	public ObservableCollection<TreeViewItemViewModel> Children { get; set; } = new ObservableCollection<TreeViewItemViewModel>();

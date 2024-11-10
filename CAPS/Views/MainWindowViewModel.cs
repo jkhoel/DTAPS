@@ -1,4 +1,4 @@
-﻿using CAPS.Services;
+﻿using CAPS.Core;
 using CAPS.Services.Mission;
 using CAPS.Views.Components;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace CAPS.Views;
 
-public partial class MainWindowViewModel : ObservableObject
+public partial class MainWindowViewModel : ViewModel
 {
 	public ObservableCollection<TreeViewItemViewModel> TreeViewItems { get; }
 

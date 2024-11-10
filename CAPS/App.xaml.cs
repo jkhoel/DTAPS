@@ -10,7 +10,8 @@ using CAPS.Views.WaypointList;
 using CAPS.Services.Mission;
 using CAPS.Services.Geo;
 using Microsoft.Extensions.Hosting;
-using System.Runtime.InteropServices.JavaScript;
+using CAPS.Core;
+using CAPS.Core.Service;
 
 namespace CAPS;
 
@@ -67,14 +68,18 @@ public partial class App : Application
 	{
 		services.AddSingleton<IMyService, MyService>();
 		services.AddSingleton<IMissionManager, MissionManager>();
-		services.AddSingleton<ITheaterService, TheaterService>();
-		services.AddSingleton<ICoordinateConverterService, CoordinateConverterService>();
+		services.AddSingleton<ITheaterManager, TheaterManager>();
+		services.AddSingleton<INavigationService, NavigationService>();
+		services.AddSingleton<ICoordinateConverter, CoordinateConverter>();
 
 		services.AddSingleton<MainWindow>();
 		services.AddSingleton<MainWindowViewModel>();
 		services.AddTransient<WaypointList>();
 		services.AddTransient<WaypointListViewModel>();
 		services.AddTransient<TreeViewItemViewModel>();
+
+		// Register delegates
+		services.AddSingleton<Func<Type, ViewModel>>(provider => viewModelType => (ViewModel)provider.GetRequiredService(viewModelType));
 
 		// Register Serilog
 		services.AddLogging(configure => configure.AddSerilog());
