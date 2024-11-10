@@ -1,12 +1,18 @@
 ﻿<Application x:Class="CAPS.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:viewModel="clr-namespace:CAPS.ViewModel"
-             xmlns:view="clr-namespace:CAPS.View"
+             xmlns:viewModel="clr-namespace:CAPS.View.MissionPlanning"
+             xmlns:view="clr-namespace:CAPS.View.MissionPlanning"
              xmlns:local="clr-namespace:CAPS">
     <Application.Resources>
-        
-       
+
+        <!--<DataTemplate DataType="{x:Type viewModel:WaypointList}">
+            <view:WaypointList />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:WaypointList}">
+            <view:WaypointList />
+        </DataTemplate>-->
 
     </Application.Resources>
 </Application>
