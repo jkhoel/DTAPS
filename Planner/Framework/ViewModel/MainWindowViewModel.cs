@@ -78,6 +78,9 @@ public partial class MainWindowViewModel: ViewModelBase
 			//	])
 			//],OnMissionSelected)
 		];
+
+		// Navigate to the first item
+		NavigateToWaypointList();
 	}
 
 	#region Event Handlers
