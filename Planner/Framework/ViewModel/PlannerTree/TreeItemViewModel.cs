@@ -1,12 +1,17 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Planner.Core.Class;
 using System.Collections.ObjectModel;
 
 namespace Planner.Framework.ViewModel.PlannerTree;
 
-public class TreeItemViewModel : ViewModelBase
+public partial class TreeItemViewModel : ViewModelBase
 {
     public string Header { get; set; } = string.Empty;
+
+    [ObservableProperty]
+    private bool isExpanded;
+
     public ObservableCollection<TreeItemViewModel> Children { get; set; } = new ObservableCollection<TreeItemViewModel>();
     public IRelayCommand OnSelectCommand { get; set; }
 

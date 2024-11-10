@@ -7,14 +7,12 @@
              xmlns:radio="clr-namespace:Planner.Framework.View.Radio"
              xmlns:local="clr-namespace:Planner">
     <Application.Resources>
-        
-        <DataTemplate DataType="{x:Type waypointVm:WaypointListViewModel}">
-            <waypoint:WaypointListView />
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type radioVm:RadioListViewModel}">
-            <radio:RadioListView />
-        </DataTemplate>
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Framework/DataTemplate.xaml" />
+                <ResourceDictionary Source="Core/Resource/Styles/TextBlock.xaml" />
+                <ResourceDictionary Source="Core/Resource/Styles/RadioButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

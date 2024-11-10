@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodel="clr-namespace:Planner.Framework.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
+        xmlns:treevm="clr-namespace:Planner.Framework.ViewModel.PlannerTree"
         xmlns:local="clr-namespace:Planner"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="800" Width="840"  WindowStartupLocation="CenterScreen" Background="#282828">
@@ -15,7 +16,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="120"/>
-            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="3"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -29,10 +30,10 @@
 
         <!-- TreeView on the left -->
         <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <TreeView ItemsSource="{Binding TreeViewItems}" Cursor="Hand" >
+            <TreeView ItemsSource="{Binding TreeViewItems}" Cursor="Hand" Background="#FF232323" BorderBrush="#00000000">
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Children}">
-                        <TextBlock Text="{Binding Header}">
+                        <TextBlock Text="{Binding Header}" Style="{StaticResource TreeItemTextBlock}">
                             <TextBlock.InputBindings>
                                 <MouseBinding Command="{Binding OnSelectCommand}" MouseAction="LeftClick" />
                             </TextBlock.InputBindings>
@@ -43,7 +44,7 @@
         </ScrollViewer>
 
         <!-- GridSplitter -->
-        <GridSplitter Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+        <GridSplitter Grid.Row="1" Grid.Column="1" Width="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FF353535" Foreground="#00000000"/>
 
         <!-- Dynamic content area on the right -->
         <ContentControl Grid.Row="1" Grid.Column="2" Content="{Binding NavigationService.CurrentView}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
