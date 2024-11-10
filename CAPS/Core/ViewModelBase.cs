@@ -2,6 +2,6 @@
 
 namespace CAPS.Core;
 
-public abstract class ViewModel: ObservableObject
+public abstract class ViewModelBase: ObservableObject
 {
 }

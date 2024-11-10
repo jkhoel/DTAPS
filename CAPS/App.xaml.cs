@@ -5,13 +5,13 @@ using CAPS.Views;
 using Serilog;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using CAPS.Views.Components;
 using CAPS.Views.WaypointList;
 using CAPS.Services.Mission;
 using CAPS.Services.Geo;
 using Microsoft.Extensions.Hosting;
-using CAPS.Core;
 using CAPS.Core.Service;
+using CAPS.ViewModel.Framework;
+using CAPS.Core;
 
 namespace CAPS;
 
@@ -79,7 +79,7 @@ public partial class App : Application
 		services.AddTransient<TreeViewItemViewModel>();
 
 		// Register delegates
-		services.AddSingleton<Func<Type, ViewModel>>(provider => viewModelType => (ViewModel)provider.GetRequiredService(viewModelType));
+		services.AddSingleton<Func<Type, ViewModelBase>>(provider => viewModelType => (ViewModelBase)provider.GetRequiredService(viewModelType));
 
 		// Register Serilog
 		services.AddLogging(configure => configure.AddSerilog());

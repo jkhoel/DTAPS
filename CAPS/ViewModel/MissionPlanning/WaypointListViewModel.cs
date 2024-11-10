@@ -43,7 +43,7 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public double? easting = easting;  // DCS Z
 }
 
-public partial class WaypointListViewModel : ViewModel
+public partial class WaypointListViewModel : ViewModelBase
 {
 	#region Fields and Ctor
 

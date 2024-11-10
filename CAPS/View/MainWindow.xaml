@@ -6,7 +6,8 @@
         xmlns:wplist="clr-namespace:CAPS.Views.WaypointList"
         xmlns:local="clr-namespace:CAPS" xmlns:views="clr-namespace:CAPS.Views" d:DataContext="{d:DesignInstance Type=views:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="800" Width="840">
+        Title="{Binding Title}" Height="800" Width="840"  WindowStartupLocation="CenterScreen"
+        >
 
     <Grid Background="#FF5A5A5A">
         <Grid.RowDefinitions>

@@ -7,15 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\WaypointList\WaypointList.xaml.cs">
+    <Compile Update="View\MissionPlanning\WaypointList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\MainWindow.xaml">
+    <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\WaypointList\WaypointList.xaml">
+    <Page Update="View\MissionPlanning\WaypointList.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
