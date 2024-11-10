@@ -6,7 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Reflection;
 
-namespace CAPS.Views;
+namespace CAPS.ViewModel;
 
 public partial class MainWindowViewModel : ViewModelBase
 {

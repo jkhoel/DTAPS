@@ -1,17 +1,18 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using CAPS.Services;
-using CAPS.Views;
+using CAPS.ViewModel;
 using Serilog;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using CAPS.Views.WaypointList;
+using CAPS.ViewModel.WaypointList;
 using CAPS.Services.Mission;
 using CAPS.Services.Geo;
 using Microsoft.Extensions.Hosting;
 using CAPS.Core.Service;
 using CAPS.ViewModel.Framework;
 using CAPS.Core;
+using CAPS.View;
 
 namespace CAPS;
 

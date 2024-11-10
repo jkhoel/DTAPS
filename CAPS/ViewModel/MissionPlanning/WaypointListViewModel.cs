@@ -11,7 +11,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 
 
-namespace CAPS.Views.WaypointList;
+namespace CAPS.ViewModel.WaypointList;
 
 public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, double? elevation, string description, double? latitude = 0, double longitude = 0, double northing = 0, double easting = 0) : ObservableObject
 {
