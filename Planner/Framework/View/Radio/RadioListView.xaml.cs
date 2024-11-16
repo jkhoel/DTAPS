@@ -1,4 +1,6 @@
-﻿using System;
+using Planner.Framework.ViewModel.Radio;
+using Planner.Framework.ViewModel.Waypoint;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace Planner.Framework.View.Radio
 		public RadioListView()
 		{
 			InitializeComponent();
+			DataContext = App.GetService<RadioListViewModel>();
 		}
 	}
 }

@@ -46,7 +46,7 @@ public class MissionFile
 	public List<TargetPoint>? TargetPoints { get; set; }
 
 	[JsonPropertyName("waypoints")]
-	public ObservableCollection<Waypoint> Waypoints { get; set; } = new ObservableCollection<Waypoint>();
+	public ObservableCollection<Waypoint> Waypoints { get; set; } = [];
 
 	#region Mission CRUD
 
