@@ -1,14 +1,14 @@
-﻿using CAPS.Services;
+using CAPS.Core;
 using CAPS.Services.Mission;
-using CAPS.Views.Components;
+using CAPS.ViewModel.Framework;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Reflection;
 
-namespace CAPS.Views;
+namespace CAPS.ViewModel;
 
-public partial class MainWindowViewModel : ObservableObject
+public partial class MainWindowViewModel : ViewModelBase
 {
 	public ObservableCollection<TreeViewItemViewModel> TreeViewItems { get; }
 

@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:waypointVm="clr-namespace:Planner.Framework.ViewModel.Waypoint"
+                    xmlns:waypoint="clr-namespace:Planner.Framework.View.Waypoint"
+                    xmlns:radioVm="clr-namespace:Planner.Framework.ViewModel.Radio"
+                    xmlns:radio="clr-namespace:Planner.Framework.View.Radio"
+                    >
+
+    <DataTemplate DataType="{x:Type waypointVm:WaypointListViewModel}">
+        <waypoint:WaypointListView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type radioVm:RadioListViewModel}">
+        <radio:RadioListView />
+    </DataTemplate>
+
+</ResourceDictionary>

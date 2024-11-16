@@ -1,25 +1,22 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
-using CAPS.Services;
-using CAPS.ViewModel;
-using Serilog;
 using Microsoft.Extensions.Configuration;
-using System.IO;
-using CAPS.ViewModel.WaypointList;
-using CAPS.Services.Mission;
-using CAPS.Services.Geo;
 using Microsoft.Extensions.Hosting;
-using CAPS.Core.Service;
-using CAPS.ViewModel.Framework;
-using CAPS.Core;
-using CAPS.View;
-using CAPS.View.MissionPlanning;
+using System.Windows;
+using Serilog;
+using System.IO;
+using Planner.Core.Class;
+using Planner.Core.Service;
+using Planner.Framework.View;
+using Planner.Framework.ViewModel;
+using Planner.Framework.Manager;
+using Planner.Framework.ViewModel.PlannerTree;
+using Planner.Framework.View.Waypoint;
+using Planner.Framework.ViewModel.Waypoint;
+using Planner.Framework.View.Radio;
+using Planner.Framework.ViewModel.Radio;
 
-namespace CAPS;
+namespace Planner;
 
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
 public partial class App : Application
 {
 	#region Initalization and Constructor
@@ -68,17 +65,22 @@ public partial class App : Application
 
 	private void InitializeServices(IServiceCollection services)
 	{
-		services.AddSingleton<IMyService, MyService>();
 		services.AddSingleton<IMissionManager, MissionManager>();
-		services.AddSingleton<ITheaterManager, TheaterManager>();
+		services.AddSingleton<ITheaterService, TheaterService>();
 		services.AddSingleton<INavigationService, NavigationService>();
-		services.AddSingleton<ICoordinateConverter, CoordinateConverter>();
+		services.AddSingleton<ICoordinateSystemService, CoordinateSystemService>();
 
 		services.AddSingleton<MainWindow>();
 		services.AddSingleton<MainWindowViewModel>();
-		services.AddTransient<WaypointList>();
+
+		services.AddTransient<TreeItemViewModel>();
+
+		services.AddTransient<WaypointListView>();
 		services.AddTransient<WaypointListViewModel>();
-		services.AddTransient<TreeViewItemViewModel>();
+
+		services.AddTransient<RadioListView>();
+		services.AddTransient<RadioListViewModel>();
+
 
 		// Register delegates
 		services.AddSingleton<Func<Type, ViewModelBase>>(provider => viewModelType => (ViewModelBase)provider.GetRequiredService(viewModelType));

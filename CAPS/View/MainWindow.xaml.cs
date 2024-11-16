@@ -1,7 +1,7 @@
-﻿using CAPS.Views;
+﻿using CAPS.ViewModel;
 using System.Windows;
 
-namespace CAPS;
+namespace CAPS.View;
 
 public partial class MainWindow : Window
 {

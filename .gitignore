@@ -1,5 +1,7 @@
-**/bin/*/**
-**/obj/*/**
 .vs
 /CAPS/obj
 /CAPS/bin
+/Library/obj
+/Library/bin
+/Planner/obj
+/Planner/bin

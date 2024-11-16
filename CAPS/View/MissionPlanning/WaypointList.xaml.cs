@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CAPS.ViewModel.WaypointList;
 using System.Windows.Controls;
 
-namespace CAPS.Views.WaypointList
+namespace CAPS.View.MissionPlanning
 {
 	/// <summary>
 	/// Interaction logic for WaypointList.xaml

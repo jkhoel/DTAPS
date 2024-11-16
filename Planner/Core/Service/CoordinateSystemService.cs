@@ -1,12 +1,10 @@
-﻿using CAPS.Models.Geo;
-using CAPS.Services.Mission;
-using CoordinateSharp;
-using System.Net;
+﻿using CoordinateSharp;
+using Library.Utils.Geo;
 using System.Text.RegularExpressions;
 
-namespace CAPS.Services.Geo;
+namespace Planner.Core.Service;
 
-public interface ICoordinateConverterService
+public interface ICoordinateSystemService
 {
 	public string LatLonToMGRS(string coordinate);
 	public (double Northing, double Easting, int Zone) ToDcsCoordiantes(string coordinate);     // NOTE! NORTHING AND EASTING IS POSSIBLY SWAPPED!
@@ -14,7 +12,6 @@ public interface ICoordinateConverterService
 	public (double Latitude, double Longitude) FromDcsCoordinates(double easting, double northing);
 	public string DdToDdm(double latitude, double longitude);
 }
-
 
 // DCS world has 3-dimensional coordinate system.DCS ground is an infinite plain.
 
@@ -24,13 +21,13 @@ public interface ICoordinateConverterService
 // Z is directed to the east
 // Y is directed up
 
-public partial class CoordinateConverterService : ICoordinateConverterService
+public partial class CoordinateSystemService : ICoordinateSystemService
 {
 	#region Constructor and Fields
 
 	private ITheaterService _theaterService;
 
-	public CoordinateConverterService(ITheaterService theaterService)
+	public CoordinateSystemService(ITheaterService theaterService)
 	{
 		_theaterService = theaterService;
 	}
@@ -131,7 +128,7 @@ public partial class CoordinateConverterService : ICoordinateConverterService
 
 		var activeTheater = _theaterService.ActiveTheater;
 
-		return UtmConverter.FromLatLon(latitude, longitude, activeTheater.UTM_zone, activeTheater.false_easting, activeTheater.false_northing);
+		return DcsUtm.FromLatLon(latitude, longitude, activeTheater.UTM_zone, activeTheater.false_easting, activeTheater.false_northing);
 	}
 
 	/// <summary>
@@ -143,7 +140,7 @@ public partial class CoordinateConverterService : ICoordinateConverterService
 	public (double Latitude, double Longitude) FromDcsCoordinates(double northing, double easting)
 	{
 		var activeTheater = _theaterService.ActiveTheater;
-		return UtmConverter.ToLatLon(easting, northing, activeTheater.UTM_zone, activeTheater.IsSouthernHemisphere, activeTheater.false_easting, activeTheater.false_northing);
+		return DcsUtm.ToLatLon(easting, northing, activeTheater.UTM_zone, activeTheater.IsSouthernHemisphere, activeTheater.false_easting, activeTheater.false_northing);
 	}
 
 	/// <summary>

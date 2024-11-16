@@ -1,17 +1,15 @@
-﻿using CAPS.Models.Files;
-using CAPS.Services;
-using CAPS.Services.Geo;
-using CAPS.Services.Mission;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Windows.Controls;
+using Planner.Core.Class;
+using Planner.Framework.Manager;
+using Library.Models.Dcs.Modules.Oh58;
+using Planner.Core.Service;
 
-
-namespace CAPS.Views.WaypointList;
+namespace Planner.Framework.ViewModel.Waypoint;
 
 public partial class WaypointListItemViewModel(string name, string coordinateString, string mgrsCoordinates, double? elevation, string description, double? latitude = 0, double longitude = 0, double northing = 0, double easting = 0) : ObservableObject
 {
@@ -43,20 +41,20 @@ public partial class WaypointListItemViewModel(string name, string coordinateStr
 	public double? easting = easting;  // DCS Z
 }
 
-public partial class WaypointListViewModel : ObservableObject
+public partial class WaypointListViewModel : ViewModelBase
 {
 	#region Fields and Ctor
 
 	private readonly IMissionManager _missionManager;
 	private readonly ILogger<WaypointListViewModel> _logger;
-	private readonly ICoordinateConverterService _coordinateConverter;
+	private readonly ICoordinateSystemService _coordinateSystemService;
 
 	private ObservableCollection<WaypointListItemViewModel> waypointItems = [];
 
-	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateConverterService coordinateConverter, IMissionManager missionManager)
+	public WaypointListViewModel(ILogger<WaypointListViewModel> logger, ICoordinateSystemService coordinateSystemService, IMissionManager missionManager)
 	{
 		_logger = logger;
-		_coordinateConverter = coordinateConverter;
+		_coordinateSystemService = coordinateSystemService;
 		_missionManager = missionManager;
 
 		// Subscribe to the PropertyChanged event of _missionManager
@@ -72,10 +70,10 @@ public partial class WaypointListViewModel : ObservableObject
 
 		foreach (var wp in _missionManager.ActiveMission.Waypoints)
 		{
-			var dd = _coordinateConverter.FromDcsCoordinates(wp.XCoord, wp.ZCoord);
+			var dd = _coordinateSystemService.FromDcsCoordinates(wp.XCoord, wp.ZCoord);
 
-			string coords = _coordinateConverter.DdToDdm(dd.Latitude, dd.Longitude);
-			string mgrs = _coordinateConverter.LatLonToMGRS(coords);
+			string coords = _coordinateSystemService.DdToDdm(dd.Latitude, dd.Longitude);
+			string mgrs = _coordinateSystemService.LatLonToMGRS(coords);
 
 			activeWaypointItems.Add(new(wp.Name, coords, mgrs, wp.YCoord, string.Empty, dd.Latitude, dd.Longitude, wp.XCoord, wp.ZCoord));
 		}
@@ -157,16 +155,16 @@ public partial class WaypointListViewModel : ObservableObject
 		// Update properties
 		if (propertyName == nameof(WaypointListItemViewModel.CoordinateString))
 		{
-			(double latitude, double longitude) = _coordinateConverter.ParseCoordinate(waypointItem.CoordinateString);
+			(double latitude, double longitude) = _coordinateSystemService.ParseCoordinate(waypointItem.CoordinateString);
 
 			waypointItem.Latitude = latitude;
 			waypointItem.Longitude = longitude;
 
-			(double northing, double easting, int _) = _coordinateConverter.ToDcsCoordiantes(waypointItem.CoordinateString);
+			(double northing, double easting, int _) = _coordinateSystemService.ToDcsCoordiantes(waypointItem.CoordinateString);
 			waypointItem.Easting = easting;
 			waypointItem.Northing = northing;
 
-			waypointItem.MgrsCoordinates = _coordinateConverter.LatLonToMGRS(waypointItem.CoordinateString);
+			waypointItem.MgrsCoordinates = _coordinateSystemService.LatLonToMGRS(waypointItem.CoordinateString);
 		}
 
 		UpdateActiveMissionWaypoints();
@@ -176,11 +174,11 @@ public partial class WaypointListViewModel : ObservableObject
 	private void UpdateActiveMissionWaypoints()
 	{
 
-		ObservableCollection<Models.Files.Waypoint> newWaypoints = [];
+		ObservableCollection<Library.Models.Dcs.Modules.Oh58.Waypoint> newWaypoints = [];
 
 		foreach (var item in WaypointItems)
 		{
-			newWaypoints.Add(new Models.Files.Waypoint(item.Name, item.Northing ?? 0, item.Elevation ?? 0, item.Easting ?? 0));
+			newWaypoints.Add(new Library.Models.Dcs.Modules.Oh58.Waypoint(item.Name, item.Northing ?? 0, item.Elevation ?? 0, item.Easting ?? 0));
 		}
 
 		_missionManager.UpdateActiveMissionWaypoints(newWaypoints);

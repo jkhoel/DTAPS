@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CAPS.Services.Mission;
 
-public interface ITheaterService
+public interface ITheaterManager
 {
 	public Theater ActiveTheater { get; set; }
 	public static Theaters Theaters => new();
 	public void SetActiveTheater(Theater theater);
 }
 
-public partial class TheaterService : ObservableObject, ITheaterService
+public partial class TheaterManager : ObservableObject, ITheaterManager
 {
 	#region Properties
 
@@ -28,7 +28,7 @@ public partial class TheaterService : ObservableObject, ITheaterService
 
 	#region Fields and Constructors
 
-	public TheaterService()
+	public TheaterManager()
 	{
 		ActiveTheater = Theaters.Kola;
 	}
