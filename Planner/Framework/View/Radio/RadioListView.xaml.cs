@@ -1,4 +1,4 @@
-﻿using Planner.Framework.ViewModel.Radio;
+using Planner.Framework.ViewModel.Radio;
 using Planner.Framework.ViewModel.Waypoint;
 using System;
 using System.Collections.Generic;

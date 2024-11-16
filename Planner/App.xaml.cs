@@ -87,7 +87,6 @@ public partial class App : Application
 		services.AddTransient<RadioListViewModel>();
 
 
-
 		// Register delegates
 		services.AddSingleton<Func<Type, ViewModelBase>>(provider => viewModelType => (ViewModelBase)provider.GetRequiredService(viewModelType));
 

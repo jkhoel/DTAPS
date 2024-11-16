@@ -22,8 +22,8 @@ public partial class TreeItemViewModel : ViewModelBase
 
     public TreeItemViewModel(int groupIndex, string header, IEnumerable<TreeItemViewModel>? children = null, Action<TreeItemViewModel>? onItemSelection = null, ContextMenu? contextMenu = null)
     {
-		GroupIndex = groupIndex;
-		Header = header;
+        GroupIndex = groupIndex;
+        Header = header;
         Children = new ObservableCollection<TreeItemViewModel>(children ?? Enumerable.Empty<TreeItemViewModel>());
         OnSelectCommand = new RelayCommand<TreeItemViewModel>(OnSelected);
         ContextMenu = contextMenu;
