@@ -1,0 +1,2740 @@
+{
+	"lasercodes" : 
+	[
+		{
+			"code" : 1688
+		},
+		{
+			"code" : 1581
+		},
+		{
+			"code" : 1666
+		},
+		{
+			"code" : 1687
+		},
+		{
+			"code" : 1622
+		},
+		{
+			"code" : 1664
+		},
+		{
+			"code" : 1772
+		},
+		{
+			"code" : 1588
+		}
+	],
+	"legalversion" : "100",
+	"missionName" : "Bodo",
+	"notebook" : 
+	[
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		},
+		{
+			"text" : ""
+		}
+	],
+	"prepoints" : 
+	[
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		},
+		{
+			"index" : -1,
+			"type" : -1
+		}
+	],
+	"radios" : 
+	{
+		"uam" : 
+		[
+			{
+				"freq" : 240000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 398150000.0,
+				"name" : "ATIS"
+			},
+			{
+				"freq" : 398650000.0,
+				"name" : "TWR"
+			},
+			{
+				"freq" : 277300000.0,
+				"name" : "APP"
+			},
+			{
+				"freq" : 237000000.0,
+				"name" : "AWACS"
+			},
+			{
+				"freq" : 248000000.0,
+				"name" : "CSAR"
+			},
+			{
+				"freq" : 229000000.0,
+				"name" : "IFR"
+			},
+			{
+				"freq" : 236500000.0,
+				"name" : "ALERT"
+			},
+			{
+				"freq" : 248500000.0,
+				"name" : "ADMIN"
+			},
+			{
+				"freq" : 235000000.0,
+				"name" : "AIR REQ"
+			},
+			{
+				"freq" : 250600000.0,
+				"name" : "B LIGHT"
+			},
+			{
+				"freq" : 225000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 235750000.0,
+				"name" : "R12"
+			},
+			{
+				"freq" : 231750000.0,
+				"name" : "R13"
+			},
+			{
+				"freq" : 230000000.0,
+				"name" : "R14"
+			},
+			{
+				"freq" : 240000000.0,
+				"name" : "R15"
+			},
+			{
+				"freq" : 243750000.0,
+				"name" : "R16"
+			},
+			{
+				"freq" : 242500000.0,
+				"name" : "R17"
+			},
+			{
+				"freq" : 237750000.0,
+				"name" : "R18"
+			},
+			{
+				"freq" : 246250000.0,
+				"name" : "R22"
+			}
+		],
+		"vam" : 
+		[
+			{
+				"freq" : 131000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 140000000.0,
+				"name" : "AW BACK"
+			},
+			{
+				"freq" : 116000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 116000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 116000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 116000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 126000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 128000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 130000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 132000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 134000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 136000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 140250000.0,
+				"name" : "R12 SEC"
+			},
+			{
+				"freq" : 119500000.0,
+				"name" : "R13 SEC"
+			},
+			{
+				"freq" : 130750000.0,
+				"name" : "R14 SEC"
+			},
+			{
+				"freq" : 141000000.0,
+				"name" : "R15 SEC"
+			},
+			{
+				"freq" : 139750000.0,
+				"name" : "R16 SEC"
+			},
+			{
+				"freq" : 120250000.0,
+				"name" : "R17 SEC"
+			},
+			{
+				"freq" : 138250000.0,
+				"name" : "R18 SEC"
+			},
+			{
+				"freq" : 120500000.0,
+				"name" : "R22 SEC"
+			}
+		],
+		"vfm1" : 
+		[
+			{
+				"freq" : 30000000.0,
+				"name" : "CUE"
+			},
+			{
+				"freq" : 67500000.0,
+				"name" : "Slate20"
+			},
+			{
+				"freq" : 65600000.0,
+				"name" : "Slate 1"
+			},
+			{
+				"freq" : 65700000.0,
+				"name" : "Slate 2"
+			},
+			{
+				"freq" : 65800000.0,
+				"name" : "Slate 3"
+			},
+			{
+				"freq" : 65900000.0,
+				"name" : "Slate 4"
+			},
+			{
+				"freq" : 66000000.0,
+				"name" : "Slate 5"
+			},
+			{
+				"freq" : 66100000.0,
+				"name" : "Slate 6"
+			},
+			{
+				"freq" : 66200000.0,
+				"name" : "Slate 7"
+			},
+			{
+				"freq" : 66300000.0,
+				"name" : "Slate 8"
+			},
+			{
+				"freq" : 66400000.0,
+				"name" : "Slate 9"
+			},
+			{
+				"freq" : 66500000.0,
+				"name" : "Slate10"
+			},
+			{
+				"freq" : 66600000.0,
+				"name" : "Slate11"
+			},
+			{
+				"freq" : 66700000.0,
+				"name" : "Slate12"
+			},
+			{
+				"freq" : 66800000.0,
+				"name" : "Slate13"
+			},
+			{
+				"freq" : 66900000.0,
+				"name" : "Slate14"
+			},
+			{
+				"freq" : 67000000.0,
+				"name" : "Slate15"
+			},
+			{
+				"freq" : 67100000.0,
+				"name" : "Slate16"
+			},
+			{
+				"freq" : 67200000.0,
+				"name" : "Slate17"
+			},
+			{
+				"freq" : 67300000.0,
+				"name" : "Slate18"
+			},
+			{
+				"freq" : 67400000.0,
+				"name" : "Slate19"
+			}
+		],
+		"vfm2" : 
+		[
+			{
+				"freq" : 30000000.0,
+				"name" : "CUE"
+			},
+			{
+				"freq" : 31000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 35600000.0,
+				"name" : "Black 1"
+			},
+			{
+				"freq" : 32900000.0,
+				"name" : "Black 2"
+			},
+			{
+				"freq" : 48500000.0,
+				"name" : "Black 3"
+			},
+			{
+				"freq" : 33800000.0,
+				"name" : "Black 4"
+			},
+			{
+				"freq" : 36300000.0,
+				"name" : "Black 5"
+			},
+			{
+				"freq" : 37800000.0,
+				"name" : "Black 6"
+			},
+			{
+				"freq" : 38200000.0,
+				"name" : "Black 7"
+			},
+			{
+				"freq" : 39800000.0,
+				"name" : "Black 8"
+			},
+			{
+				"freq" : 40400000.0,
+				"name" : "Black9"
+			},
+			{
+				"freq" : 41000000.0,
+				"name" : "Black10"
+			},
+			{
+				"freq" : 36400000.0,
+				"name" : "Black11"
+			},
+			{
+				"freq" : 62000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 66000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 68000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 72000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 74000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 78000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 80000000.0,
+				"name" : ""
+			},
+			{
+				"freq" : 84000000.0,
+				"name" : ""
+			}
+		]
+	},
+	"routes" : 
+	[
+		{
+			"name" : ""
+		},
+		{
+			"name" : ""
+		},
+		{
+			"name" : ""
+		}
+	],
+	"targetpoints" : 
+	[
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		},
+		{
+			"artynumber" : "",
+			"date" : "",
+			"datum" : 47,
+			"firemission" : "",
+			"firemissionstatus" : "",
+			"fom" : 1,
+			"name" : "",
+			"quantity" : 0,
+			"subtype" : 108,
+			"time" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		}
+	],
+	"waypoints" : 
+	[
+		{
+			"datum" : 47,
+			"name" : "1W",
+			"x" : -66957.796875,
+			"y" : 10.0,
+			"z" : -348352.28125
+		},
+		{
+			"datum" : 47,
+			"name" : "2W",
+			"x" : -64776.8203125,
+			"y" : 0.0,
+			"z" : -351449.53125
+		},
+		{
+			"datum" : 47,
+			"name" : "3W",
+			"x" : -73628.0625,
+			"y" : 16.0,
+			"z" : -348636.8125
+		},
+		{
+			"datum" : 47,
+			"name" : "4W",
+			"x" : -72163.890625,
+			"y" : 31.0,
+			"z" : -337181.40625
+		},
+		{
+			"datum" : 47,
+			"name" : "5W",
+			"x" : -72698.8828125,
+			"y" : 27.0,
+			"z" : -329067.90625
+		},
+		{
+			"datum" : 47,
+			"name" : "6W",
+			"x" : -50696.26171875,
+			"y" : 21.0,
+			"z" : -344099.625
+		},
+		{
+			"datum" : 47,
+			"name" : "7W",
+			"x" : -53166.734375,
+			"y" : 0.0,
+			"z" : -353772.8125
+		},
+		{
+			"datum" : 47,
+			"name" : "8W",
+			"x" : -78857.390625,
+			"y" : 16.0,
+			"z" : -361926.28125
+		},
+		{
+			"datum" : 47,
+			"name" : "9W",
+			"x" : -77524.140625,
+			"y" : 0.0,
+			"z" : -350774.3125
+		},
+		{
+			"datum" : 47,
+			"name" : "10W",
+			"x" : -71280.8359375,
+			"y" : 0.0,
+			"z" : -324194.34375
+		},
+		{
+			"datum" : 47,
+			"name" : "11W",
+			"x" : -46596.48828125,
+			"y" : 20.0,
+			"z" : -363021.65625
+		},
+		{
+			"datum" : 47,
+			"name" : "12W",
+			"x" : -87150.8828125,
+			"y" : 2.0,
+			"z" : -372355.0625
+		},
+		{
+			"datum" : 47,
+			"name" : "13W",
+			"x" : -73356.8046875,
+			"y" : 0.0,
+			"z" : -420452.75
+		},
+		{
+			"datum" : 47,
+			"name" : "14W",
+			"x" : -119206.8671875,
+			"y" : 0.0,
+			"z" : -424819.8125
+		},
+		{
+			"datum" : 47,
+			"name" : "15W",
+			"x" : -131595.1875,
+			"y" : 835.0,
+			"z" : -358840.0625
+		},
+		{
+			"datum" : 47,
+			"name" : "16W",
+			"x" : -122673.5546875,
+			"y" : 833.0,
+			"z" : -370510.21875
+		},
+		{
+			"datum" : 47,
+			"name" : "17W",
+			"x" : -83011.65625,
+			"y" : 609.0,
+			"z" : -320806.1875
+		},
+		{
+			"datum" : 47,
+			"name" : "18W",
+			"x" : -84051.359375,
+			"y" : 131.0,
+			"z" : -284431.59375
+		},
+		{
+			"datum" : 47,
+			"name" : "19W",
+			"x" : -130975.0,
+			"y" : 797.0,
+			"z" : -285591.46875
+		},
+		{
+			"datum" : 47,
+			"name" : "20W",
+			"x" : -128852.734375,
+			"y" : 633.0,
+			"z" : -325169.0
+		},
+		{
+			"datum" : 47,
+			"name" : "21W",
+			"x" : -28237.359375,
+			"y" : 0.0,
+			"z" : -348364.53125
+		},
+		{
+			"datum" : 47,
+			"name" : "22W",
+			"x" : -32248.4375,
+			"y" : 0.0,
+			"z" : -307405.125
+		},
+		{
+			"datum" : 47,
+			"name" : "23W",
+			"x" : -56211.9375,
+			"y" : 356.0,
+			"z" : -309541.0
+		},
+		{
+			"datum" : 47,
+			"name" : "24W",
+			"x" : -56982.7734375,
+			"y" : 387.0,
+			"z" : -330510.3125
+		},
+		{
+			"datum" : 47,
+			"name" : "25W",
+			"x" : -53920.08984375,
+			"y" : 0.0,
+			"z" : -343004.5625
+		},
+		{
+			"datum" : 47,
+			"name" : "26W",
+			"x" : 5831.50244140625,
+			"y" : 0.0,
+			"z" : -335927.78125
+		},
+		{
+			"datum" : 47,
+			"name" : "27W",
+			"x" : 41307.96484375,
+			"y" : 0.0,
+			"z" : -272150.3125
+		},
+		{
+			"datum" : 47,
+			"name" : "28W",
+			"x" : 34460.60546875,
+			"y" : 0.0,
+			"z" : -259157.578125
+		},
+		{
+			"datum" : 47,
+			"name" : "29W",
+			"x" : -34408.5859375,
+			"y" : 1151.0,
+			"z" : -282691.9375
+		},
+		{
+			"datum" : 47,
+			"name" : "30W",
+			"x" : -28021.330078125,
+			"y" : 0.0,
+			"z" : -337965.0
+		},
+		{
+			"datum" : 47,
+			"name" : "",
+			"x" : 0.0,
+			"y" : 0.0,
+			"z" : 0.0
+		}
+	]
+}

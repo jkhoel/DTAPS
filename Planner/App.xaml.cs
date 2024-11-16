@@ -14,6 +14,8 @@ using Planner.Framework.View.Waypoint;
 using Planner.Framework.ViewModel.Waypoint;
 using Planner.Framework.View.Radio;
 using Planner.Framework.ViewModel.Radio;
+using Planner.Framework.ViewModel.MissionSettings;
+using Planner.Framework.View.MissionSettings;
 
 namespace Planner;
 
@@ -75,11 +77,15 @@ public partial class App : Application
 
 		services.AddTransient<TreeItemViewModel>();
 
+		services.AddTransient<MissionSettingsView>();
+		services.AddTransient<MissionSettingsViewModel>();
+
 		services.AddTransient<WaypointListView>();
 		services.AddTransient<WaypointListViewModel>();
 
 		services.AddTransient<RadioListView>();
 		services.AddTransient<RadioListViewModel>();
+
 
 
 		// Register delegates

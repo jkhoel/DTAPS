@@ -9,15 +9,18 @@ public partial class TreeItemViewModel : ViewModelBase
 {
     public string Header { get; set; } = string.Empty;
 
+    public int GroupIndex { get; set; }
+
     [ObservableProperty]
     private bool isExpanded;
 
     public ObservableCollection<TreeItemViewModel> Children { get; set; } = new ObservableCollection<TreeItemViewModel>();
     public IRelayCommand OnSelectCommand { get; set; }
 
-    public TreeItemViewModel(string header, IEnumerable<TreeItemViewModel>? children = null, Action<TreeItemViewModel>? onItemSelection = null)
+    public TreeItemViewModel(int groupIndex, string header, IEnumerable<TreeItemViewModel>? children = null, Action<TreeItemViewModel>? onItemSelection = null)
     {
-        Header = header;
+		GroupIndex = groupIndex;
+		Header = header;
         Children = new ObservableCollection<TreeItemViewModel>(children ?? Enumerable.Empty<TreeItemViewModel>());
         OnSelectCommand = new RelayCommand<TreeItemViewModel>(OnSelected);
 
