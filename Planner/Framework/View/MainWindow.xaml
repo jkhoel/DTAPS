@@ -33,7 +33,7 @@
             <TreeView ItemsSource="{Binding TreeViewItems}" Cursor="Hand" Background="#FF232323" BorderBrush="#00000000">
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Children}">
-                        <TextBlock Text="{Binding Header}" Style="{StaticResource TreeItemTextBlock}">
+                        <TextBlock Text="{Binding Header}" Style="{StaticResource TreeItemTextBlock}" ContextMenu="{Binding ContextMenu}">
                             <TextBlock.InputBindings>
                                 <MouseBinding Command="{Binding OnSelectCommand}" MouseAction="LeftClick" />
                             </TextBlock.InputBindings>

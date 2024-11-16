@@ -10,6 +10,7 @@ using Planner.Framework.ViewModel.Radio;
 using Planner.Framework.ViewModel.Waypoint;
 using System.Collections.ObjectModel;
 using System.Reflection;
+using System.Windows.Controls;
 
 namespace Planner.Framework.ViewModel;
 
@@ -49,8 +50,6 @@ public partial class MainWindowViewModel : ViewModelBase
 		missionManager.MissionListChanged += OnMissionsListChanged;
 	}
 
-
-
 	private void UpdateNavigationTree()
 	{
 		var treeItems = new ObservableCollection<TreeItemViewModel>();
@@ -62,18 +61,22 @@ public partial class MainWindowViewModel : ViewModelBase
 			var missionName = string.IsNullOrEmpty(mission.MissionName) ? $"Mission {index + 1}" : $"Mission {index + 1}: {mission.MissionName}";
 
 			var children = new ObservableCollection<TreeItemViewModel>
-		{
-			new(index, "Laser Codes", null, OnMissionSelected),
-			new(index, "Notebook", null, OnMissionSelected),
-			new(index, "Prepoints", null, OnMissionSelected),
-			new(index, "Radios", null, OnTreeItemRadioListSelected),
-			new(index, "Routes", null, OnMissionSelected),
-			new(index, "TargetPoints", null, OnMissionSelected),
-			new(index, "Waypoints", null, OnTreeItemWaypointListSelected)
-		};
+			{
+				new(index, "Laser Codes", null, OnMissionSelected),
+				new(index, "Notebook", null, OnMissionSelected),
+				new(index, "Prepoints", null, OnMissionSelected),
+				new(index, "Radios", null, OnTreeItemRadioListSelected),
+				new(index, "Routes", null, OnMissionSelected),
+				new(index, "TargetPoints", null, OnMissionSelected),
+				new(index, "Waypoints", null, OnTreeItemWaypointListSelected)
+			};
+
+			var ctxMenu = new ContextMenu();
+			ctxMenu.Items.Add(new MenuItem { Header = "Delete Mission", Command = DeleteMissionCommand, CommandParameter = index });
 
 			var missionItem = new TreeItemViewModel(index, missionName, children, OnTreeMissionSettingsSelected)
 			{
+				ContextMenu = ctxMenu,
 				IsExpanded = true
 			};
 
@@ -121,15 +124,23 @@ public partial class MainWindowViewModel : ViewModelBase
 	//public RelayCommand<TreeItemViewModel> OnMissionSelectedCommand => new RelayCommand<TreeItemViewModel>(OnMissionSelected);
 
 	[RelayCommand]
+	public Task DeleteMission(int index)
+	{
+		MissionManager.RemoveMission(index);
+
+		return Task.CompletedTask;
+	}
+
+	[RelayCommand]
 	public async Task ImportMission()
 	{
-		await missionManager.LoadMissionFile();
+		await MissionManager.LoadMissionFile();
 	}
 
 	[RelayCommand]
 	public async Task ExportMission()
 	{
-		await missionManager.ExportActiveMission();
+		await MissionManager.ExportActiveMission();
 	}
 
 	#endregion

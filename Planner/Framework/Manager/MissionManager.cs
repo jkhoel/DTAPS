@@ -14,13 +14,14 @@ public interface IMissionManager
 	public void UpdateActiveMissionWaypoints(ObservableCollection<Waypoint> waypoints);
 	public Task LoadMissionFile();
 	public Task ExportActiveMission();
+	public void RemoveMission(int index);
 
 	public event EventHandler<MissionFile>? ActiveMissionChanged;
 
 	public event EventHandler<ObservableCollection<MissionFile>>? MissionListChanged;
 }
 
-public partial class MissionManager : ObservableObject, IMissionManager //, INotifyPropertyChanged
+public partial class MissionManager : ObservableObject, IMissionManager
 {
 	#region Properties
 
@@ -41,7 +42,7 @@ public partial class MissionManager : ObservableObject, IMissionManager //, INot
 		MissionList.Add(ActiveMission);
 	}
 
-	
+
 
 	#endregion
 
@@ -88,6 +89,11 @@ public partial class MissionManager : ObservableObject, IMissionManager //, INot
 	{
 		var cancellationTokenSource = new CancellationTokenSource();
 		await MissionFileExporter.ExportMissionFileAsync(ActiveMission, cancellationTokenSource.Token);
+	}
+
+	public void RemoveMission(int index)
+	{
+		MissionList.RemoveAt(index);
 	}
 
 	#endregion
