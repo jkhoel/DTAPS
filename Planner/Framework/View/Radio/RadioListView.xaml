@@ -4,9 +4,62 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Planner.Framework.View.Radio"
+             xmlns:vm="clr-namespace:Planner.Framework.ViewModel.Radio" d:DataContext="{d:DesignInstance Type=vm:RadioListViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+
+        <DataTemplate x:Key="RadioItemTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Text="{Binding Name, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" Grid.Column="0"/>
+                <TextBox Text="{Binding Frequency, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" HorizontalAlignment="Stretch" MinWidth="50" Grid.Column="1"/>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
-        <TextBlock Text="Radio List" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="UAM" Foreground="White" HorizontalAlignment="Center" />
+            <ListView ItemsSource="{Binding UamRadioItems}" ItemTemplate="{StaticResource RadioItemTemplate}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="VAM" Foreground="White" HorizontalAlignment="Center" />
+            <ListView ItemsSource="{Binding VamRadioItems}" ItemTemplate="{StaticResource RadioItemTemplate}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <TextBlock Text="FM1" Foreground="White" HorizontalAlignment="Center" />
+            <ListView ItemsSource="{Binding Vfm1RadioItems}" ItemTemplate="{StaticResource RadioItemTemplate}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="3">
+            <TextBlock Text="FM2" Foreground="White" HorizontalAlignment="Center" />
+            <ListView ItemsSource="{Binding Vfm2RadioItems}" ItemTemplate="{StaticResource RadioItemTemplate}" />
+        </StackPanel>
+
     </Grid>
 </UserControl>
