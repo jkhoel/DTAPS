@@ -1,4 +1,4 @@
-﻿using CAPS.Core;
+using CAPS.Core;
 using CAPS.Models.Files;
 using CAPS.Services;
 using CAPS.Services.Geo;

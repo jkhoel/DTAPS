@@ -1,4 +1,4 @@
-﻿using CAPS.Core;
+using CAPS.Core;
 using CAPS.Services.Mission;
 using CAPS.ViewModel.Framework;
 using CommunityToolkit.Mvvm.ComponentModel;
